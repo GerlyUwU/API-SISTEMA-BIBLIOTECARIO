@@ -8,6 +8,7 @@ public class SistemaBibliotecarioApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SistemaBibliotecarioApplication.class, args);
+		System.out.println("hola mundo desde spring ");
 	}
 
 }
