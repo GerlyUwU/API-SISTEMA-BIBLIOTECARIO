@@ -28,12 +28,19 @@ public class LibroController {
         return new ResponseEntity<>(libroService.agregarLibro(libro), HttpStatus.CREATED);
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<Libro> buscarLibroPorId(@PathVariable String id) {
+        return libroService.buscarLibroPorId(id)
+                .map(libro -> ResponseEntity.ok(libro))
+                .orElse(ResponseEntity.notFound().build());
+    }
+
     @GetMapping
     public ResponseEntity<List<Libro>> listarLibros() {
         return new ResponseEntity<>(libroService.listarLibros(), HttpStatus.OK);
     }
-
-    @GetMapping("/{isbn}")
+//fue modificada la ruta de isbn 
+    @GetMapping("/isbn/{isbn}") 
     public ResponseEntity<Libro> buscarLibroPorISBN(@PathVariable String isbn) {
         Libro libro = libroService.buscarLibroPorISBN(isbn);
         return libro != null ? new ResponseEntity<>(libro, HttpStatus.OK) : new ResponseEntity<>(HttpStatus.NOT_FOUND);

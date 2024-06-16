@@ -1,11 +1,13 @@
 package com.uv.sistemaBibliotecario.service;
 
-import com.uv.sistemaBibliotecario.model.Libro;
-import com.uv.sistemaBibliotecario.repository.LibroRepository;
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import com.uv.sistemaBibliotecario.model.Libro;
+import com.uv.sistemaBibliotecario.repository.LibroRepository;
 
 @Service
 public class LibroService {
@@ -27,5 +29,9 @@ public class LibroService {
 
     public void eliminarLibro(String id) {
         libroRepository.deleteById(id);
+    }
+
+    public Optional<Libro> buscarLibroPorId(String id) {
+        return libroRepository.findById(id);
     }
 }
