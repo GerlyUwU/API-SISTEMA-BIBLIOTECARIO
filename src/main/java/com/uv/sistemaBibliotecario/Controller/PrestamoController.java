@@ -8,10 +8,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.uv.sistemaBibliotecario.dto.PrestamoRequest;
 import com.uv.sistemaBibliotecario.model.Libro;
 import com.uv.sistemaBibliotecario.model.Prestamo;
 import com.uv.sistemaBibliotecario.model.Usuario;
@@ -23,7 +24,7 @@ import com.uv.sistemaBibliotecario.service.UsuarioService;
 @RequestMapping("/api/prestamos")
 public class PrestamoController {
 
-    @Autowired
+     @Autowired
     private PrestamoService prestamoService;
 
     @Autowired
@@ -33,9 +34,9 @@ public class PrestamoController {
     private UsuarioService usuarioService;
 
     @PostMapping
-    public ResponseEntity<Prestamo> realizarPrestamo(@RequestParam String isbn, @RequestParam String usuarioId) {
-        Libro libro = libroService.buscarLibroPorISBN(isbn);
-        Usuario usuario = usuarioService.buscarUsuarioPorID(usuarioId);
+    public ResponseEntity<Prestamo> realizarPrestamo(@RequestBody PrestamoRequest prestamoRequest) {
+        Libro libro = libroService.buscarLibroPorISBN(prestamoRequest.getIsbn());
+        Usuario usuario = usuarioService.buscarUsuarioPorID(prestamoRequest.getUsuarioId());
         if (libro == null || usuario == null) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
