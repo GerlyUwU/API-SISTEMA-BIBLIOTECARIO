@@ -21,8 +21,12 @@ Este es un sistema bibliotecario que proporciona una API RESTful desarrollada co
 
 ## Configuración del Proyecto
 
+### informacion sobre el consumo de la api desde postman
+https://documenter.getpostman.com/view/35380043/2sA3XQiNfJ
+
 ### Clonar el repositorio
 
 ```sh
 git clone https://github.com/tuusuario/biblioteca.git
 cd biblioteca
+
