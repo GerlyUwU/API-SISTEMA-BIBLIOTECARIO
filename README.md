@@ -65,10 +65,12 @@ Diseñar y crear una API REST utilizando métodos HTTP para manejar peticiones y
 - [x] Dockerfile/Docker Compose para la imagen del proyecto.
 - [x] Imagen registrada en DockerHub.
 - [x] Descripción del proceso de recreación/ejecución del proyecto.
+   [DockerFile](https://github.com/GerlyUwU/API-SISTEMA-BIBLIOTECARIO/blob/main/Dockerfile).
 
 ### Orquestación con Jenkins
 - [x] Diagrama de pipeline de orquestación del proyecto.
 - [x] Jenkinsfile y documentos para integración/despliegue continuo.
+      [JenkinsFile](https://github.com/GerlyUwU/API-SISTEMA-BIBLIOTECARIO/blob/main/JenkinsFile).
 
 
 ## Documentación de API
