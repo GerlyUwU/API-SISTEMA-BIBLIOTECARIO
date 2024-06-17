@@ -70,14 +70,6 @@ Diseñar y crear una API REST utilizando métodos HTTP para manejar peticiones y
 - [x] Diagrama de pipeline de orquestación del proyecto.
 - [x] Jenkinsfile y documentos para integración/despliegue continuo.
 
-### Documentación del Proyecto
-- [x] Portada.
-- [x] Definición y especificación de requerimientos.
-- [x] Arquitectura del sistema.
-- [x] Diseño del modelo de datos.
-- [x] Descripción de procesos y servicios ofrecidos.
-- [x] Documentación técnica del API REST.
-- [x] Herramientas utilizadas.
 
 ## Documentación de API
 La documentación completa de la API, incluyendo detalles sobre endpoints, métodos HTTP, ejemplos de peticiones y respuestas, se encuentra disponible en [Postman](https://documenter.getpostman.com/view/35380043/2sA3XQiNfJ).
