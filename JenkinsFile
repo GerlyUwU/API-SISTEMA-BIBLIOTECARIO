@@ -23,8 +23,7 @@ pipeline {
         stage('Deploy (Optional)') {
             steps {
                 script {
-                    // Implementar en producción
-                    // ...
+                   
                 }
             }
         }
