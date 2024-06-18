@@ -1,5 +1,6 @@
 
-FROM openjdk:11
+FROM openjdk:17-jre-slim
+
 
 
 WORKDIR /app
