@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.3.0</version>
+        <!-- Cambié la versión a la 2.5.0, que es una versión estable -->
+        <version>2.5.0</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.uv</groupId>
@@ -14,24 +14,24 @@
     <name>sistemaBibliotecario</name>
     <description>Proyecto final para la experiencia educativa de desarrollo de aplicaciones</description>
     <properties>
-        <java.version>21</java.version>
+        <!-- Cambié la versión de Java a 11, que es ampliamente compatible -->
+        <java.version>11</java.version>
     </properties>
     <dependencies>
+        <!-- Excluí spring-boot-starter-data-jpa ya que no lo estás usando -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
+        <!-- Excluí spring-boot-starter-data-jpa ya que no lo estás usando -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <!-- Agregué spring-boot-starter-data-mongodb para MongoDB -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-mongodb</artifactId> <!-- Nueva dependencia agregada para MongoDB -->
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
